@@ -1,4 +1,5 @@
 pipeline {
+    node("master") {
     agent any
     stages {
         stage('Build') {
@@ -28,5 +29,6 @@ pipeline {
 		}
 	    }
 	}
+    }
     }
 }
