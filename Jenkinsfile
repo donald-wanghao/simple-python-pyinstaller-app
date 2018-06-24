@@ -1,3 +1,12 @@
+/*
+ * Wang Hao add the following jenkins pipeline configuration to test jenkins pipeline
+ * functionality. I use python, pytest and pyinstaller tools to set up the three stages
+ * of pipeline, i.e. "Build", "Test", "Deliver"
+ * 2018-06-24
+ *
+ * Please use the Blue Ocean plugin to view the pipeline.  WH
+ *
+ */
 pipeline {
     agent {label 'master'}
     stages {
