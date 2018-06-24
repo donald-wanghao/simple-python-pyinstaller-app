@@ -16,6 +16,15 @@ pipeline {
 		    junit 'test-reports/results.xml'
 		}
 	    }
-	 }
+	}
+
+	stage('Deliver') {
+	    steps {
+	        bat 'pyinstaller --onefile sources/add2vals.py'
+	    }
+	    post {
+	        archiveArtifacts 'dist/add2vals'
+	    }
+	}
     }
 }
